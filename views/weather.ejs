@@ -1,0 +1,32 @@
+<%- include('partials/header') -%>
+
+
+    <section class="weather-section">
+      <div class="container">
+        <ul class="cities">
+          <% for(i = 0; i < 8; i++){ %> 
+
+          <li class="city">
+            <h2 class="city-name">
+              <span class="span-city"><%= city[i] %></span>
+              <sup><%= id[i] %></sup>
+            </h2>
+            <div class="city-temp"><%= temp[i] %><sup>°C</sup></div>
+            <figure>
+              <img
+                class="city-icon"
+                src="http://openweathermap.org/img/w/<%= icon[i] %>.png"
+                alt="overcast clouds"
+              />
+              <figcaption><%= des[i] %></figcaption>
+            </figure>
+          </li>
+          <% } %>
+
+        </ul>
+      </div>
+    </section>
+
+
+
+    <%- include('partials/footer') -%>

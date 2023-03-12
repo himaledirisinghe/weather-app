@@ -1,0 +1,13 @@
+<%- include('partials/header') -%>
+
+<h1 class="text-4xl">Welcome to Weather Information App</h1>
+
+<% if (locals.isAuthenticated) { %>
+    <p>You are logged in.</p><br>
+    <a href="/weather" class="link-button">View Weather Information</a>
+<% } else { %>
+    <p>You are not logged in.</p> <br>
+    <a href="/login" class="link-button">Login</a>
+<% } %>
+
+<%- include('partials/footer') -%>
